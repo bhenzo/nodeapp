@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+    - source: /dist
+      destination: /home/ubuntu/nodeapp
+file_exists_behavior: OVERWRITE
+hooks:
+    ApplicationStop:
+        - location: scripts/stop_application.sh
+          timeout: 40
+          runas: root
+    AfterInstall:
+        - location: scripts/install.sh
+          timeout: 300
+          runas: root
+    ApplicationStart:
+        - location: scripts/start_application.sh
+          timeout: 500
+          runas: root
