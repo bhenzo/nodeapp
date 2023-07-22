@@ -1,0 +1,21 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "conc \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "build": "cd backend && npm run build && cd .. && cd frontend && npm run build && cd .. && node build.js",
+    "start": "cd dist && node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
