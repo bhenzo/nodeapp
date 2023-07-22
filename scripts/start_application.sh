@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/ubuntu/nodeapp/dist
+cd /home/ec2-user/nodeapp/dist
 screen -dmS nodeapp node main.js
