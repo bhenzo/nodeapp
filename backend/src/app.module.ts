@@ -4,12 +4,9 @@ import { AppService } from './app.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 
-const isEnv = process.env.NODE_ENV === "development";
-const path = isEnv ? join(__dirname, "../../", "frontend/build") : join(__dirname, "public");
-
 @Module({
   imports: [ServeStaticModule.forRoot({
-    rootPath: path
+    rootPath: join(__dirname, "public")
   })],
   controllers: [AppController],
   providers: [AppService],

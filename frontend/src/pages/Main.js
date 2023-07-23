@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import axios from 'axios';
+import { Button, Container } from 'react-bootstrap';
+import NavbarLayout from './layout/NavbarLayout';
 
-function App() {
+const Main = () => {
   const [items, setItems] = useState([]);
 
   // fetch items from server
@@ -16,10 +17,10 @@ function App() {
 
 
   return (
-    <div className="App">
-      {items.map(it => <p key={it}>{it}</p>)}
-    </div>
+    <NavbarLayout>
+        test
+    </NavbarLayout>
   );
 }
 
-export default App;
+export default Main;
