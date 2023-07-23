@@ -2,18 +2,18 @@ version: 0.0
 os: linux
 files:
     - source: /
-      destination: /home/ubuntu/nodeapp
+      destination: /home/ec2-user/nodeapp
 file_exists_behavior: OVERWRITE
 hooks:
     ApplicationStop:
         - location: scripts/stop_application.sh
           timeout: 50
-          runas: root
+          runas: ec2-user
     AfterInstall:
         - location: scripts/install.sh
           timeout: 300
-          runas: root
+          runas: ec2-user
     ApplicationStart:
         - location: scripts/start_application.sh
           timeout: 500
-          runas: root
+          runas: ec2-user
