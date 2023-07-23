@@ -10,11 +10,11 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'build'),
 	},
-    devServer: {
-        proxy: {
-          '/api': 'http://localhost:3007',
-        },
-      },
+	devServer: {
+		proxy: {
+			'/api': 'http://localhost:3007',
+		},
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, 'src', 'index.html'),
@@ -28,7 +28,7 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-env',  ["@babel/preset-react", {"runtime": "automatic"}]],
+						presets: ['@babel/preset-env', ['@babel/preset-react', { runtime: 'automatic' }]],
 					},
 				},
 			},
@@ -38,7 +38,7 @@ module.exports = {
 			},
 			{
 				test: /\.(png|jp(e*)g|svg|gif)$/,
-				use: ['file-loader'],
+				type: 'asset/resource',
 			},
 		],
 	},

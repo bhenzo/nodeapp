@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Button, Container } from 'react-bootstrap';
 import NavbarLayout from './layout/NavbarLayout';
+import LoginModal from '../components/LoginModal';
 
 const Main = () => {
   const [items, setItems] = useState([]);
@@ -17,8 +18,10 @@ const Main = () => {
 
 
   return (
-    <NavbarLayout>
-        test
+    <NavbarLayout centerVertically centerHorizontally>
+        <LoginModal>
+
+        </LoginModal>
     </NavbarLayout>
   );
 }

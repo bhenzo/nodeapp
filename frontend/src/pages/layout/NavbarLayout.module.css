@@ -1,0 +1,16 @@
+.container-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('../../imgs/logo.svg');
+    background-color: #7789a3;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y: 40%;
+
+}
+.container {
+    flex-grow: 1;
+    display:flex;
+}

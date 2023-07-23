@@ -1,0 +1,9 @@
+.login-modal {
+    padding: 18px;
+    background-color: #273c75;
+    color: #7f8fa6;
+    border-radius: 2px;
+    box-shadow: 1px 1px 8px #273c75;
+    flex-grow: 1;
+    max-width: 380px;
+}
